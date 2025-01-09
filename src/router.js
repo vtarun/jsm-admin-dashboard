@@ -1,13 +1,32 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "./pages/RootLayout";
 
+import { 
+    Ecommerce, 
+    Orders, 
+    Employees, 
+    Customers,     
+    Calendar,
+    Kanban,
+    Editor,
+    ColorPicker,    
+    Line, 
+    Area, 
+    Bar, 
+    Pie, 
+    Financial,
+    ColorMapping, 
+    Pyramid, 
+    Stacked 
+} from "./pages";
+
 const router = createBrowserRouter([
     {
         path: '/', 
         element: <RootLayout />,
         children: [
-            {path: '', index: true, element: <ECommerce />},
-            {path: '/ecommerce', element: <ECommerce />},
+            {path: '', index: true, element: <Ecommerce />},
+            {path: '/ecommerce', element: <Ecommerce />},
 
             // Pages
             {path: '/orders', element: <Orders />},
@@ -15,7 +34,7 @@ const router = createBrowserRouter([
             {path: '/customers', element: <Customers />},
 
             // Apps
-            {path: '/calender', element: <Calender />},
+            {path: '/calender', element: <Calendar />},
             {path: '/kanban', element: <Kanban />},
             {path: '/editor', element: <Editor />},
             {path: '/color-picker', element: <ColorPicker />},
@@ -28,6 +47,7 @@ const router = createBrowserRouter([
             {path: '/financial', element: <Financial />},
             {path: '/color-mapping', element: <ColorMapping />},
             {path: '/pyramid', element: <Pyramid />},
+            {path: '/stacked', element: <Stacked />},
         ]
     }
 ]);
