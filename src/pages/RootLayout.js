@@ -7,8 +7,11 @@ import {
   Navbar , Footer, Sidebar, ThemeSettings
 } from '../components';
 
+import { useStateContext } from '../contexts/ContextProvider';
+
 const RootLayout = () => {
-  const [activeMenu, setActiveMenu] = useState(true);
+  // const [activeMenu, setActiveMenu] = useState(true);
+  const { activeMenu } = useStateContext();
   return (
     <div>
       <div className="flex relative dark:bg-main-dark-bg">
