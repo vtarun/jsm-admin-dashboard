@@ -34,7 +34,7 @@ const router = createBrowserRouter([
             {path: '/customers', element: <Customers />},
 
             // Apps
-            {path: '/calender', element: <Calendar />},
+            {path: '/calendar', element: <Calendar />},
             {path: '/kanban', element: <Kanban />},
             {path: '/editor', element: <Editor />},
             {path: '/color-picker', element: <ColorPicker />},
