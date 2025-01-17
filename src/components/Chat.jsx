@@ -1,9 +1,68 @@
-import React from 'react'
+import React from 'react';
+import { MdOutlineCancel } from 'react-icons/md';
+
+import avatar from '../data/avatar.jpg';
+import Button from './Button';
+import { useStateContext } from '../contexts/ContextProvider';
 
 const Chat = () => {
+  const {currentColor, setIsClicked} = useStateContext();
   return (
-    <div>
-      Chat
+    <div className='nav-item absolute right-36 top-16 bg-white shadow-2xl w-96 p-8 rounded-md'>
+      <div className='flex justify-between items-center border-blue-500 border-xl'>
+        <p>Messages <span className="text-xs p-0 ml-3 pl-2 pr-2 rounded-md" style={{backgroundColor: currentColor}}>5 new</span> </p>   
+        <div>
+          <button 
+            onClick={() => setIsClicked(prev => ({...prev, ['chat']: false}))}
+            type="button" 
+            className='text-sm rounded-full hover:bg-light-gray mt-2'>
+              <MdOutlineCancel />
+          </button>
+        </div>
+      </div>
+
+      <div className='mt-5'>
+        <div className='flex items-center gap-5 border-b-1 border-gray-200 pb-3 hover:bg-gray-100 cursor-pointer'>
+          <img className="rounded-full w-8 h-8" src={avatar} />
+          <div>
+            <p className="font-semibold dark:text-gray-200">Roman Joined the Team!</p>
+            <p className="text-gray-500 text-sm dark:text-gray-400">Congratulate him</p>
+            <p className="text-gray-500 text-sm dark:text-gray-400">9:08 AM</p>
+          </div>
+        </div>
+
+        <div className='flex items-center gap-5 border-b-1 border-gray-200 pb-3 hover:bg-gray-100 cursor-pointer'>
+          <img className="rounded-full w-8 h-8" src={avatar} />
+          <div>
+            <p className="font-semibold dark:text-gray-200">Roman Joined the Team!</p>
+            <p className="text-gray-500 text-sm dark:text-gray-400">Congratulate him</p>
+            <p className="text-gray-500 text-sm dark:text-gray-400">9:08 AM</p>
+          </div>
+        </div>
+
+        <div className='flex items-center gap-5 border-b-1 border-gray-200 pb-3 hover:bg-gray-100 cursor-pointer'>
+          <img className="rounded-full w-8 h-8" src={avatar} />
+          <div>
+            <p className="font-semibold dark:text-gray-200">Roman Joined the Team!</p>
+            <p className="text-gray-500 text-sm dark:text-gray-400">Congratulate him</p>
+            <p className="text-gray-500 text-sm dark:text-gray-400">9:08 AM</p>
+          </div>
+        </div>
+
+        <div className='flex items-center gap-5 border-b-1 border-gray-200 pb-3 hover:bg-gray-100 cursor-pointer'>
+          <img className="rounded-full w-8 h-8" src={avatar} />
+          <div>
+            <p className="font-semibold dark:text-gray-200">Roman Joined the Team!</p>
+            <p className="text-gray-500 text-sm dark:text-gray-400">Congratulate him</p>
+            <p className="text-gray-500 text-sm dark:text-gray-400">9:08 AM</p>
+          </div>
+        </div>
+
+        <div className="mt-6">
+            <Button color="white" bgColor={currentColor} text="See all messages" borderRadius="10px" size="md" className="w-full"/>
+          </div>
+      </div>
+      
     </div>
   )
 }
