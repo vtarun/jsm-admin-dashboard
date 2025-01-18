@@ -14,8 +14,7 @@ import {
     Area, 
     Bar, 
     Pie, 
-    Financial,
-    ColorMapping, 
+    Financial, 
     Pyramid, 
     Stacked 
 } from "./pages";
@@ -45,7 +44,6 @@ const router = createBrowserRouter([
             {path: '/bar', element: <Bar />},
             {path: '/pie', element: <Pie />},
             {path: '/financial', element: <Financial />},
-            {path: '/color-mapping', element: <ColorMapping />},
             {path: '/pyramid', element: <Pyramid />},
             {path: '/stacked', element: <Stacked />},
         ]
