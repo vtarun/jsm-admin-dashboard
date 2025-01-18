@@ -36,7 +36,9 @@ const RootLayout = () => {
           </div>
           { themeSettings && <ThemeSettings />}
           <Outlet/>
+          <Footer />
         </div> 
+       
       </div>     
     </div>
   )
