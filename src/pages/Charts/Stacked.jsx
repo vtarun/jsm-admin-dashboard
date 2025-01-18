@@ -9,4 +9,3 @@ const Stacked = () => {
 }
 
 export default Stacked
-Stacked

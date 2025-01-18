@@ -10,12 +10,12 @@ const Notification = () => {
   return (
     <div className='nav-item absolute right-36 top-16 bg-white shadow-2xl w-96 p-8 rounded-md'>
       <div className='flex justify-between items-center border-blue-500 border-xl'>
-        <p>Notifications <span className="text-xs p-0 ml-3 pl-2 pr-2 rounded-md" style={{backgroundColor: currentColor}}>5 new</span> </p>   
+        <p className="font-extrabold font">Notifications <span className="text-xs p-0 ml-3 pl-2 pr-2 rounded-md" style={{backgroundColor: currentColor}}>5 new</span> </p>   
         <div>
           <button 
             onClick={() => setIsClicked(prev => ({...prev, ['notification']: false}))}
             type="button" 
-            className='text-sm rounded-full hover:bg-light-gray mt-2'>
+            className='text-xl rounded-full hover:bg-light-gray p-2'>
               <MdOutlineCancel />
           </button>
         </div>
