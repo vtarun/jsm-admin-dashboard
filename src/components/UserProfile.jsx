@@ -61,8 +61,8 @@ const UserProfile = () => {
         </div>
 
         <div className="mt-6">
-            <Button color="white" bgColor={currentColor} text="See all messages" borderRadius="10px" size="md" className="w-full"/>
-          </div>
+          <Button color="white" bgColor={currentColor} text="See all messages" borderRadius="10px" size="md" className="w-full"/>
+        </div>
       </div>
       
     </div>

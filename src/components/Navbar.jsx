@@ -60,7 +60,7 @@ const Navbar = () => {
       <div className="flex">
           <NavButton 
             title="Cart"
-            customFunc={() => setActiveMenu(prev => !prev)} 
+            customFunc={() => handleClick('cart')} 
             icon={<FiShoppingCart />} 
             color={currentColor} 
           />
