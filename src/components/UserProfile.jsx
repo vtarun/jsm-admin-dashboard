@@ -10,7 +10,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 const UserProfile = () => {
   const {currentColor, setIsClicked} = useStateContext();
   return (
-    <div className='nav-item absolute right-4 top-16 bg-white shadow-2xl w-96 p-8 rounded-md'>
+    <div className='nav-item absolute right-4 top-16 bg-white shadow-2xl w-11/12 md:w-96 p-8 rounded-md'>
       <div className='flex justify-between items-center border-blue-500 border-xl'>
         <p className="font-extrabold font">User Profile</p>   
         <div>
@@ -33,7 +33,7 @@ const UserProfile = () => {
           </div>
         </div>
 
-        <div className='flex items-center gap-5 border-b-1 border-gray-200 pb-3 hover:bg-gray-100 cursor-pointer'>
+        <div className='flex items-center gap-5 border-b-1 border-gray-200 pb-3 pl-2 hover:bg-gray-100 cursor-pointer'>
           <BsPersonSquare className="w-8 h-8 text-red-500" style={{color: `${currentColor}`}}/>
           <div>
             <p className="font-semibold dark:text-gray-200">My Profile</p>
@@ -42,7 +42,7 @@ const UserProfile = () => {
           </div>
         </div>
 
-        <div className='flex items-center gap-5 border-b-1 border-gray-200 pb-3 hover:bg-gray-100 cursor-pointer'>
+        <div className='flex items-center gap-5 border-b-1 border-gray-200 pb-3 pl-2 hover:bg-gray-100 cursor-pointer'>
           <BsEnvelopePaperFill className="w-8 h-8 text-red-500" style={{color: `${currentColor}`}} />
           <div>
             <p className="font-semibold dark:text-gray-200">My Inbox</p>
@@ -51,7 +51,7 @@ const UserProfile = () => {
           </div>
         </div>
 
-        <div className='flex items-center gap-5 border-b-1 border-gray-200 pb-3 hover:bg-gray-100 cursor-pointer'>
+        <div className='flex items-center gap-5 border-b-1 border-gray-200 pb-3 pl-2 hover:bg-gray-100 cursor-pointer'>
           <FaTasks className="w-8 h-8 text-red-500" style={{color: `${currentColor}`}} />
           <div>
             <p className="font-semibold dark:text-gray-200">My Tasks</p>
