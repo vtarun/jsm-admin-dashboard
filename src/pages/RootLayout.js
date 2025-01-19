@@ -1,5 +1,5 @@
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { FiSettings } from 'react-icons/fi';
 import { Outlet } from 'react-router-dom';
 
@@ -13,6 +13,16 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const RootLayout = () => {
   const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
+
+  useEffect(() => {
+    const currentThemeColor = localStorage.getItem('colorMode');
+    const currentThemeMode = localStorage.getItem('themeMode');
+    if (currentThemeColor && currentThemeMode) {
+      setCurrentColor(currentThemeColor);
+      setCurrentMode(currentThemeMode);
+    } 
+  }, []);
+
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <div className="flex relative dark:bg-main-dark-bg">
